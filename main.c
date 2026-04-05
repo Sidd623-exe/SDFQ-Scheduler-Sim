@@ -1,6 +1,3 @@
-/*
- * main.c — Orchestration: generate tasks, run CFS, run SDFQ, plot both.
- */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,7 +11,6 @@
 int main(void) {
     srand((unsigned)time(NULL));
 
-    /* ── Generate stochastic workload ───────────────────────── */
     Task *tasks = generate_tasks(NUM_TASKS);
     if (!tasks) {
         fprintf(stderr, "Failed to allocate tasks.\n");
